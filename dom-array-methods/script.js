@@ -50,7 +50,9 @@ function sortRichestUsers() {
   updateDom();
 }
 function sortPoorestUsers() {
-  data.sort((a, b) => a.money < b.money);
+  data.sort((a, b) => {
+    return a.money - b.money;
+  });
 
   updateDom();
 }
